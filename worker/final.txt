@@ -1,0 +1,25 @@
+Operations:100000 Runs:3  Cores:12 Workers: 960000
+
+========================================== BENCHMARK RESULTS ==========================================
+Function                       Time            Memory (MiB)    Sys Mem (MiB)   GC Runs    Goroutines
+--------------------------------------------------------------------------------------------------------
+ConcurrentWorkerPoolDispatcher 1m11.770517569s 1146            2113            3          1021418
+ConcurrentWithChan             1m30.701178444s 853             0               1          220261
+ConcurrentWorkerPoolWithChan   1m9.162233722s  886             37              1          1067727
+======================================================================================================
+
+All tests completed. Total time: 13m8.21846525s
+
+Operations:1000000 Runs:3  Cores:12 Workers: 960000
+========================================== BENCHMARK RESULTS ==========================================
+Function                       Time            Memory (MiB)    Sys Mem (MiB)   GC Runs    Goroutines
+-------------------------------------------------------------------------------------------------------
+ConcurrentWorkerPoolDispatcher 1m47.906019485s 4496            3383            4          1365443
+ConcurrentWithChan             3m52.453657374s 5367            10              3          932071
+ConcurrentWorkerPoolWithChan   3m7.273325597s  4374            0               3          1298026
+=======================================================================================================
+
+All tests completed. Total time: 28m13.51663725s
+
+Final memory statistics:
+Alloc = 3052 MiB        TotalAlloc = 43326 MiB  Sys = 10381 MiB NumGC = 37
